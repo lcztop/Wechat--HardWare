@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/profile/profile",
+    "pages/homepage/homepage",
+    "pages/lesson/lesson", 
+    "pages/clockin/clockin",
+    "pages/activity/activity",
+    "pages/select-lesson/select-lesson",
+    "pages/select-write/select-write"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "测试版 V1.0",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#000000",
+    "backgroundColor": "#D3D3D3",
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepage.png"
+      },
+      {
+        "pagePath": "pages/lesson/lesson",
+        "text": "课程",
+        "iconPath": "images/lesson.png",
+        "selectedIconPath": "images/lesson.png"
+      },
+      {
+        "pagePath": "pages/clockin/clockin",
+        "text": "签到",
+        "iconPath": "images/clockin.png",
+        "selectedIconPath": "images/clockin.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activity.png"
+      },
+      {
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "images/profile.png",
+      "selectedIconPath": "images/profile.png"
+      }]
+  },
+
+  "sitemapLocation": "sitemap.json"
+}

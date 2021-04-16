@@ -1,0 +1,17 @@
+<!-- <view class="card">
+  <text>体育锻炼</text>
+</view>
+<view class="card">
+  <text>技能提升</text>
+</view>
+<view class="card">
+  <text>自律自立</text>
+</view>
+<view class="card">
+  <text>志愿者服务</text>
+</view> -->
+<block wx:for="{{['体育锻炼','技能提升','自律自立','志愿者服务']}}">
+  <view class="card" bindtap="jumpToWrite" data-type="{{item}}">
+    <view>{{item}}</view>
+  </view>
+</block>
