@@ -1,4 +1,4 @@
-// pages/clockin/clockin.js
+// pages/erweima/erweima.js
 Page({
 
   /**
@@ -11,12 +11,6 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  jumpToSelect: function(event){
-    wx.navigateTo({
-      url: `/pages/select-lesson/select-lesson`
-    })
-  },
-
   onLoad: function (options) {
 
   },

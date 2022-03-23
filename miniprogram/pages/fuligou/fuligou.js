@@ -1,4 +1,4 @@
-// pages/lesson/lesson.js
+// pages/fuligou/fuligou.js
 Page({
 
   /**

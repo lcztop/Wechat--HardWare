@@ -1,12 +1,11 @@
 {
   "pages": [
     "pages/profile/profile",
-    "pages/homepage/homepage",
-    "pages/lesson/lesson", 
-    "pages/clockin/clockin",
-    "pages/activity/activity",
-    "pages/select-lesson/select-lesson",
-    "pages/select-write/select-write"
+    "pages/fuligou/fuligou",
+    "pages/erweima/erweima",
+    "pages/xingxiaoxi/xingxiaoxi",
+    "pages/my/my"
+
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -16,41 +15,45 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "custom": true,
     "color": "#696969",
     "selectedColor": "#000000",
     "backgroundColor": "#D3D3D3",
     "list": [
       {
-        "pagePath": "pages/homepage/homepage",
+        "pagePath": "pages/profile/profile",
         "text": "首页",
         "iconPath": "images/homepage.png",
         "selectedIconPath": "images/homepage.png"
       },
       {
-        "pagePath": "pages/lesson/lesson",
-        "text": "课程",
+        "pagePath": "pages/fuligou/fuligou",
+        "text": "福利购",
         "iconPath": "images/lesson.png",
         "selectedIconPath": "images/lesson.png"
       },
       {
-        "pagePath": "pages/clockin/clockin",
-        "text": "签到",
+        "pagePath": "pages/erweima/erweima",
+        "text": "会员码",
         "iconPath": "images/clockin.png",
         "selectedIconPath": "images/clockin.png"
       },
       {
-        "pagePath": "pages/activity/activity",
-        "text": "活动",
+        "pagePath": "pages/xingxiaoxi/xingxiaoxi",
+        "text": "星消息",
         "iconPath": "images/activity.png",
         "selectedIconPath": "images/activity.png"
       },
       {
-      "pagePath": "pages/profile/profile",
-      "text": "我的",
-      "iconPath": "images/profile.png",
-      "selectedIconPath": "images/profile.png"
-      }]
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile.png"
+      }
+    ]
   },
-
+  "usingComponents": {
+    "customTabBar":"components/custom-tab-bar/custom-tab-bar"
+  },
   "sitemapLocation": "sitemap.json"
 }

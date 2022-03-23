@@ -1,0 +1,24 @@
+<view class="cu-bar tabbar bg-black custom-tabbar">
+    <view class="action text-green">
+      <view class="iconfont icon-yinliao"></view> 首页
+    </view>
+    <view class="action text-gray">
+      <view class="iconfont icon-gift"></view> 福利购
+    </view>
+    <view class="action text-gray">
+      <view class="iconfont icon-erweima "></view>
+      会员码
+    </view>
+    <view class="action text-gray">
+      <view class="iconfont icon-mingxinghuodong">
+        <view class="cu-tag badge">99</view>
+      </view>
+      星消息
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-my">
+        <view class="cu-tag badge"></view>
+      </view>
+      我的
+    </view>
+  </view>

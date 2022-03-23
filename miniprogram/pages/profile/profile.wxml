@@ -1,2 +1,22 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+
+<view class="navigator">
+    导航版区域
+</view>
+
+<view class="box1">
+  <icon class="iconfont icon-ditu" style="margin-left: 30rpx;"></icon>
+  <view style="margin-right: 30rpx;">个人积分显示</view>
+</view>
+
+<view class="box2"> 
+  <view style="margin:20rpx; padding:100rpx; border-style:groove;" bindtap="toShoppingPage">五金小店</view>
+  <view style="margin:20rpx; padding:100rpx; border-style:groove;">家政维修</view>
+
+</view>
+
+<view class="box3">
+  <view style="margin:10rpx; padding:30rpx 200rpx ; border-style:groove;">品质生活馆</view>
+  <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日礼券</view>
+  <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日新闻</view>
+</view>
+<customTabBar />
