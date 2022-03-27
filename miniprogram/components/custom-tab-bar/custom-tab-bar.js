@@ -1,8 +1,12 @@
-
 Component({
-
+  properties: {
+    selectedFromPage: {
+      type: Int16Array,
+      value: 0
+    }
+  },
   data: {
-    selected: wx.getStorageSync('selected'),
+    selected: 0,
     color: "#7A7E83",
     selectedColor: "#3cc51f",
     list: [{
@@ -10,7 +14,7 @@ Component({
         iconPath: "../../images/profile.png",
         selectedIconPath: "../../images/profile-act.png",
         text: "首页"
-      }, 
+      },
       {
         pagePath: "../../pages/fuligou/fuligou",
         iconPath: "../../images/gift.png",
@@ -38,21 +42,21 @@ Component({
     ]
   },
   attached() {},
-  created:function () {
-    console.log(this.data.selected)
+
+  pageLifetimes: {
+    show: function () {
+      let res = parseInt(this.data.selectedFromPage)
+      this.setData({
+        selected: res
+      })
+    },
   },
+
   methods: {
-    
     switchTab(e) {
       let data = e.currentTarget.dataset
-
-      console.log(data)
       let url = data.path
-      let res = wx.setStorageSync('selected', data.index)
-      console.log(res)
-      this.setData({
-        selected: data.index
-      })
+      console.log(url)
       wx.switchTab({
         url
       })

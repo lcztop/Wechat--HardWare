@@ -1,3 +1,3 @@
 <!--pages/fuligou/fuligou.wxml-->
 <text>pages/fuligou/fuligou.wxml</text>
-<customTabBar data-selected = "1"/>
+<customTabBar selectedFromPage = "1"/>

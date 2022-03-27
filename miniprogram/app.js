@@ -13,10 +13,7 @@ App({
         traceUser: true,
       })
     }
-    wx.setStorage({
-      key: 'selected',
-      data: 0
-    })
+   
     this.globalData = {}
     
   }
