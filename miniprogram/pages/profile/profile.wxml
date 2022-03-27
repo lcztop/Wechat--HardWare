@@ -19,4 +19,5 @@
   <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日礼券</view>
   <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日新闻</view>
 </view>
-<customTabBar />
+
+<customTabBar data-selected = "0"/>

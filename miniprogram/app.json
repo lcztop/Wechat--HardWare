@@ -4,8 +4,8 @@
     "pages/fuligou/fuligou",
     "pages/erweima/erweima",
     "pages/xingxiaoxi/xingxiaoxi",
-    "pages/my/my"
-
+    "pages/my/my",
+    "pages/hardware/hardware"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -22,38 +22,55 @@
     "list": [
       {
         "pagePath": "pages/profile/profile",
-        "text": "首页",
-        "iconPath": "images/homepage.png",
-        "selectedIconPath": "images/homepage.png"
+        "text": "首页"
       },
       {
         "pagePath": "pages/fuligou/fuligou",
-        "text": "福利购",
-        "iconPath": "images/lesson.png",
-        "selectedIconPath": "images/lesson.png"
-      },
-      {
-        "pagePath": "pages/erweima/erweima",
-        "text": "会员码",
-        "iconPath": "images/clockin.png",
-        "selectedIconPath": "images/clockin.png"
-      },
-      {
-        "pagePath": "pages/xingxiaoxi/xingxiaoxi",
-        "text": "星消息",
-        "iconPath": "images/activity.png",
-        "selectedIconPath": "images/activity.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "images/profile.png",
-        "selectedIconPath": "images/profile.png"
+        "text": "福利购"
       }
     ]
   },
   "usingComponents": {
-    "customTabBar":"components/custom-tab-bar/custom-tab-bar"
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-progress": "@vant/weapp/progress/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-switch": "@vant/weapp/switch/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-area": "@vant/weapp/area/index",
+    "customTabBar": "./components/custom-tab-bar/custom-tab-bar"
   },
   "sitemapLocation": "sitemap.json"
 }
