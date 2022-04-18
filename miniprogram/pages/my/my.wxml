@@ -1,3 +1,8 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view style="text-align: center;">
+  <image class="avatarUrl" src="{{userInfo.avatarUrl}}"></image>
+  <view class="name">{{userInfo.nickName}}</view>
+</view>
+
+<button bindtap="login">登录</button>
 <customTabBar selectedFromPage = "4"/>

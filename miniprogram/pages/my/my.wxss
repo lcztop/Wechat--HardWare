@@ -1,1 +1,9 @@
 /* pages/my/my.wxss */
+.avatarUrl{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.name{
+
+}
