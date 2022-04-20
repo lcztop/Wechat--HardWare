@@ -16,8 +16,11 @@
 
 <view class="box3">
   <view style="margin:10rpx; padding:30rpx 200rpx ; border-style:groove;">品质生活馆</view>
-  <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日礼券</view>
+  <!-- <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日礼券</view> -->
   <view style="margin:10rpx; padding:100rpx 230rpx; border-style:groove;">每日新闻</view>
+  <button>sku db test</button>
+
+  <button bindtap="sendReq">db test</button>
 </view>
 
 <customTabBar selectedFromPage = "0"/>
