@@ -5,7 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo:{}
+    
+  },
+  
+  login(){
+    var that = this
+    wx.getUserProfile({
+      desc: '授权登录',
+      success(res){
+        console.log(res)
+        that.setData({
+          userInfo: res.userInfo
+        })
+      }
+    })
   },
 
   /**
