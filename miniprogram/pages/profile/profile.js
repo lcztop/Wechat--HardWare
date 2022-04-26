@@ -68,5 +68,18 @@ Page({
     wx.navigateTo({
       url: '../hardware/hardware',
     })
+  },
+  sendReq: function (){
+    console.log("Hello world.")
+    const serverURL = 'https://service-d1t4upj7-1304578354.sh.apigw.tencentcs.com/release/service-status'
+    wx.request({
+      url: serverURL,
+      success: function(res){
+        // this.setData({
+
+        // })
+        console.log(res.data)
+      }
+    })
   }
 })
