@@ -1,49 +1,18 @@
-// pages/my/my.js
-const app = getApp()
+// pages/template-card/template-card.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:{}
-    
-  },
-  
-  login(){
-    var that = this
-    
-    wx.getUserProfile({
-      desc: '授权登录',
-      success(res){
-        that.setData({
-          userInfo: res.userInfo
-        })
-        var user = res.userInfo
-        app.globalData.userInfo = user
-        
-        console.log(res)
-        
-        // wx.cloud.database().collection('user').add({
-        //   data: {
-        //     avatarUrl: user.avatarUrl,
-        //     nickName: user.nickName,
-        //   }
-        // })
-        
-      }
-    })
-    
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    this.setData({
-      userInfo: app.globalData.userInfo
-    })
+
   },
 
   /**
@@ -57,7 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**

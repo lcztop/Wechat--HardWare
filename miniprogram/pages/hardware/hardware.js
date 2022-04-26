@@ -1,4 +1,6 @@
 const WXAPI = require('apifm-wxapi')
+const AUTH = require('../../utils/auth')
+const TOOLS = require('../../utils/tools')
 const testCategory = [
   {'name': '商品类别1', 'id': 100, 'level': 1},
   {'name': '商品类别2', 'id': 101, 'level': 1},
@@ -8,9 +10,9 @@ const testCategory = [
   {'name': '商品类别6', 'id': 105, 'level': 1}
 ]
 const testGood = [
-  {'categoryId': '101', 'name': '零食大礼包', 'minPrice': '49.9', 'numberSells': '25', 'pic':'https://img1.baidu.com/it/u=1086056681,522763603&fm=26&fmt=auto'},
-  {'categoryId': '102', 'name': '你要不要吧', 'minPrice': '20000', 'numberSells': '0', 'pic': 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F1212%2F0329d5d1g00r40b3q009zc0006o005kc.gif&refer=http%3A%2F%2Fdingyue.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650876913&t=ecc60834968506e9edb1e0827ab7793b'},
-  {'categoryId': '101', 'name': '五金器具', 'minPrice': '129', 'numberSells': '10', 'pic': 'https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00184-3228.jpg'},
+  {'categoryId': '101', 'id': '1','name': '零食大礼包', 'minPrice': '49.9', 'numberSells': '25', 'pic':'https://img1.baidu.com/it/u=1086056681,522763603&fm=26&fmt=auto'},
+  {'categoryId': '102', 'id': '2','name': '你要不要吧', 'minPrice': '20000', 'numberSells': '0', 'pic': 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F1212%2F0329d5d1g00r40b3q009zc0006o005kc.gif&refer=http%3A%2F%2Fdingyue.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650876913&t=ecc60834968506e9edb1e0827ab7793b'},
+  {'categoryId': '101', 'id': '3','name': '五金器具', 'minPrice': '129', 'numberSells': '10', 'pic': 'https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00184-3228.jpg'},
 ]
 
 Page({
@@ -157,6 +159,90 @@ Page({
       scrolltop: 0
     });
     this.getGoodsList();
+  },
+  async addShopCar(e) {
+    const curGood = this.data.currentGoods.find(ele => {
+      return ele.id == e.currentTarget.dataset.id
+    })
+    console.log(curGood)
+    if (!curGood) {
+      return
+    }
+    // 检查当前商品是否仍有库存
+    /*if (curGood.stores <= 0) {
+       wx.showToast({
+         title: '已售罄~',
+         icon: 'none'
+       })
+       return
+      } */
+    this.addShopCarCheck({
+      goodsId: curGood.id,
+      buyNumber: 1,
+      sku: []
+    })
+  },
+  async addShopCarCheck(options){
+    // AUTH.checkHasLogined().then(isLogined => {
+    //   this.setData({
+    //     wxlogin: isLogined
+    //   })
+    //   if (isLogined) {
+    //     // 处理加入购物车的业务逻辑
+    //     this.addShopCarDone(options)
+    //   } else {
+    //     AUTH.login(this)
+    //   }
+    // })
+    this.addShopCarDone(options)
+  },
+  async addShopCarDone(options){
+    // const res = await WXAPI.shippingCarInfoAddItem(wx.getStorageSync('token'), options.goodsId, options.buyNumber, options.sku)
+    let code = '1000'
+    if (code == '100') {
+      // 需要选择规格尺寸
+      // const skuCurGoodsRes = await WXAPI.goodsDetail(options.goodsId)
+      let skuCurGoodsRes = {
+        'code': 1,
+        'msg': 'yes'
+      }
+      if (skuCurGoodsRes.code != 0) {
+        console.log('123')
+        wx.showToast({
+          title: skuCurGoodsRes.msg,
+          icon: 'none'
+        })
+        return
+      }
+      wx.hideTabBar()
+      const skuCurGoods = skuCurGoodsRes.data
+      skuCurGoods.basicInfo.storesBuy = 1
+      this.setData({
+        skuCurGoods,
+        skuGoodsPic: skuCurGoods.basicInfo.pic,
+        selectSizePrice: skuCurGoods.basicInfo.minPrice,
+        selectSizeOPrice: skuCurGoods.basicInfo.originalPrice,
+        skuCurGoodsShow: true
+      })
+      return
+    }
+    // if (code != 0) {
+    //   wx.showToast({
+    //     title: res.msg,
+    //     icon: 'none'
+    //   })
+    //   return
+    // }
+    // wx.showToast({
+    //   title: '加入成功',
+    //   icon: 'success'
+    // })
+    // this.setData({
+    //   skuCurGoods: null,
+    //   skuCurGoodsShow: false
+    // })
+    wx.showTabBar()
+    TOOLS.showTabBarBadge() // 获取购物车数据，显示TabBarBadge
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -28,10 +28,10 @@ Component({
         text: "会员码"
       },
       {
-        pagePath: "../../pages/xingxiaoxi/xingxiaoxi",
+        pagePath: "../../pages/gouwuche/gouwuche",
         iconPath: "../../images/star.png",
         selectedIconPath: "../../images/star-act.png",
-        text: "星消息"
+        text: "购物车"
       },
       {
         pagePath: "../../pages/my/my",
