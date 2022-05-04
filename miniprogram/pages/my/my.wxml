@@ -13,5 +13,6 @@
   <view class="name">{{userInfo.nickName}}</view>
 </view>
 
-<button bindtap="login">登录</button>
-<customTabBar selectedFromPage = "4"/>
+<button wx:if="{{userInfo == null}}"bindtap="login">登录</button>
+<customTabBar selectedFromPage = "3"/>
+

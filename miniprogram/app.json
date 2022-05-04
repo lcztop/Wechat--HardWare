@@ -5,7 +5,9 @@
     "pages/erweima/erweima",
     "pages/xingxiaoxi/xingxiaoxi",
     "pages/my/my",
-    "pages/hardware/hardware"
+    "pages/hardware/hardware",
+    "pages/gouwuche/gouwuche",
+    "pages/template-card/template-card"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -25,16 +27,12 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/fuligou/fuligou",
-        "text": "福利购"
-      },
-      {
         "pagePath": "pages/erweima/erweima",
         "text": "会员码"
       },
       {
-        "pagePath": "pages/xingxiaoxi/xingxiaoxi",
-        "text": "星消息"
+        "pagePath": "pages/gouwuche/gouwuche",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",

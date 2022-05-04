@@ -27,12 +27,13 @@ Component({
         selectedIconPath: "../../images/code-act.png",
         text: "会员码"
       },
-      // {
-      //   pagePath: "../../pages/xingxiaoxi/xingxiaoxi",
-      //   iconPath: "../../images/star.png",
-      //   selectedIconPath: "../../images/star-act.png",
-      //   text: "星消息"
-      // },
+
+      {
+        pagePath: "../../pages/gouwuche/gouwuche",
+        iconPath: "../../images/star.png",
+        selectedIconPath: "../../images/star-act.png",
+        text: "购物车"
+      },
       {
         pagePath: "../../pages/my/my",
         iconPath: "../../images/my.png",
