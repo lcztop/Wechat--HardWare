@@ -1,0 +1,720 @@
+{
+  "homehome_id": "11246115",
+  "homehome sku example": "https://erp.yslcloud.com/process.aspx?action=load_dispgrid&pwd=480074992&billType=PRODUCT|0&incChild=true&parentId=11246115&sort=id&dir=ASC&incDisabled=false&start=0&limit=20&recCount=-1",
+    "success": true,
+    "msg": null,
+    "n": 1635,
+    "obj": {
+        "reset_col": 1
+    },
+    "metaData": {
+        "idProperty": "id",
+        "successProperty": "success",
+        "totalProperty": "n",
+        "root": "tbl",
+        "fields": [
+            {
+                "header": "id",
+                "name": "id",
+                "type": "float",
+                "w": 0
+            },
+            {
+                "header": "序号",
+                "name": "rn",
+                "w": 40,
+                "id": 8519
+            },
+            {
+                "header": "启用",
+                "name": "enabled",
+                "type": "boolean",
+                "w": 0,
+                "id": 8520
+            },
+            {
+                "header": "is_spec",
+                "name": "is_spec",
+                "type": "float",
+                "w": 0,
+                "id": 48249
+            },
+            {
+                "header": "图片",
+                "name": "img_tag",
+                "id": 13505
+            },
+            {
+                "header": "color",
+                "name": "color",
+                "type": "float",
+                "w": 0,
+                "id": 12774
+            },
+            {
+                "header": "商品编号",
+                "name": "code",
+                "id": 8522
+            },
+            {
+                "header": "商品名称",
+                "name": "name",
+                "w": 240,
+                "id": 8523
+            },
+            {
+                "header": "采购价格",
+                "name": "buy_price",
+                "type": "float",
+                "id": 8537,
+                "amt": true
+            },
+            {
+                "header": "零售价",
+                "name": "price0",
+                "type": "float",
+                "id": 8538,
+                "amt": true
+            },
+            {
+                "header": "路径",
+                "name": "paths",
+                "id": 66569
+            },
+            {
+                "header": "实价",
+                "name": "txt1",
+                "id": 50349
+            },
+            {
+                "header": "品类",
+                "name": "txt2",
+                "id": 50350
+            },
+            {
+                "hlp": "wms模块配货时优先从存储区配整箱的商品",
+                "header": "整箱数量",
+                "name": "box_qty",
+                "type": "float",
+                "id": 51921
+            },
+            {
+                "header": "规格",
+                "name": "spec",
+                "id": 8566
+            },
+            {
+                "header": "商品条码",
+                "name": "barcode",
+                "id": 50317
+            },
+            {
+                "header": "计量单位",
+                "name": "unit",
+                "id": 8526
+            },
+            {
+                "header": "单位关系",
+                "name": "units",
+                "w": 0,
+                "id": 15660
+            },
+            {
+                "header": "主供应商编号",
+                "name": "main_supplier_code",
+                "id": 34
+            },
+            {
+                "header": "主供应商",
+                "name": "main_supplier",
+                "id": 8529,
+                "edit_type": "B"
+            },
+            {
+                "id": 52098,
+                "header": "上柜日期",
+                "edit_type": "D",
+                "name": "open_date",
+                "w": -1,
+                "type": "date"
+            },
+            {
+                "header": "品牌名称",
+                "name": "brand",
+                "id": 8530,
+                "edit_type": "B"
+            },
+            {
+                "header": "默认仓库编码",
+                "name": "def_warehouse_id",
+                "type": "float",
+                "w": -1,
+                "id": 27166
+            },
+            {
+                "header": "存货属性",
+                "name": "cat",
+                "w": 0,
+                "id": 9224,
+                "edit_type": "L"
+            },
+            {
+                "header": "商品组",
+                "name": "product_group",
+                "id": 8531,
+                "edit_type": "B"
+            },
+            {
+                "header": "型号",
+                "name": "model",
+                "id": 8567
+            },
+            {
+                "header": "产地",
+                "name": "made_in",
+                "id": 8568
+            },
+            {
+                "header": "重量(千克)",
+                "name": "weight",
+                "type": "float",
+                "id": 8532
+            },
+            {
+                "header": "体积(立方米)",
+                "name": "volume",
+                "type": "float",
+                "id": 8533
+            },
+            {
+                "header": "采购周期(天)",
+                "name": "buy_days",
+                "type": "float",
+                "id": 8562
+            },
+            {
+                "header": "fb",
+                "name": "force_batch",
+                "type": "float",
+                "w": 0,
+                "id": 49969
+            },
+            {
+                "header": "兑换所需积分",
+                "name": "point_r",
+                "type": "float",
+                "id": 8565
+            },
+            {
+                "header": "退市",
+                "name": "txt3",
+                "id": 50351
+            },
+            {
+                "header": "采购扣率",
+                "name": "discount_rateb",
+                "type": "float",
+                "w": 0,
+                "id": 13830
+            },
+            {
+                "header": "销售扣率",
+                "name": "discount_rate",
+                "type": "float",
+                "w": 0,
+                "id": 13818
+            },
+            {
+                "header": "税率%",
+                "name": "tax_pct",
+                "type": "float",
+                "w": 0,
+                "id": 49447
+            },
+            {
+                "header": "默认采购单位",
+                "name": "buy_unit",
+                "w": 0,
+                "id": 50298,
+                "edit_type": "Q"
+            },
+            {
+                "header": "默认销售单位",
+                "name": "sell_unit",
+                "w": 0,
+                "id": 50299,
+                "edit_type": "Q"
+            },
+            {
+                "header": "分销价",
+                "name": "price1",
+                "type": "float",
+                "id": 8539,
+                "amt": true
+            },
+            {
+                "header": "预售价2",
+                "name": "price2",
+                "type": "float",
+                "id": 8540,
+                "amt": true
+            },
+            {
+                "header": "预售价3",
+                "name": "price3",
+                "type": "float",
+                "id": 8541,
+                "amt": true
+            },
+            {
+                "header": "预售价4",
+                "name": "price4",
+                "type": "float",
+                "id": 8542,
+                "amt": true
+            },
+            {
+                "header": "预售价5",
+                "name": "price5",
+                "type": "float",
+                "id": 8543,
+                "amt": true
+            },
+            {
+                "header": "预售价6",
+                "name": "price6",
+                "type": "float",
+                "id": 8544,
+                "amt": true
+            },
+            {
+                "header": "预售价7",
+                "name": "price7",
+                "type": "float",
+                "id": 8545,
+                "amt": true
+            },
+            {
+                "header": "预售价8",
+                "name": "price8",
+                "type": "float",
+                "id": 8546,
+                "amt": true
+            },
+            {
+                "header": "预售价9",
+                "name": "price9",
+                "type": "float",
+                "id": 8547,
+                "amt": true
+            },
+            {
+                "header": "备注",
+                "name": "comment",
+                "id": 8549
+            },
+            {
+                "header": "1级分类",
+                "name": "level1",
+                "id": 66570
+            },
+            {
+                "header": "2级分类",
+                "name": "level2",
+                "id": 66571
+            },
+            {
+                "header": "3级分类",
+                "name": "level3",
+                "id": 66572
+            },
+            {
+                "header": "4级分类",
+                "name": "level4",
+                "id": 66573
+            }
+        ]
+    },
+    "tbl": [
+        {
+            "id": 11248551,
+            "rn": "1",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2006",
+            "name": "得力 6寸钢丝钳",
+            "buy_price": 10.40,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940014",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 14.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248552,
+            "rn": "2",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2008",
+            "name": "得力 8寸钢丝钳",
+            "buy_price": 12.40,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940038",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 16.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248553,
+            "rn": "3",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2106",
+            "name": "得力 6寸尖嘴钳",
+            "buy_price": 9.60,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940069",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 13.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248554,
+            "rn": "4",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2206",
+            "name": "得力 6寸斜嘴钳",
+            "buy_price": 9.90,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940045",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 14.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248555,
+            "rn": "5",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL100208",
+            "name": "得力 8.5寸多功能钢丝钳",
+            "buy_price": 30.80,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6973107489945",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 39.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248556,
+            "rn": "6",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL101207",
+            "name": "得力 7寸多功能尖嘴钳",
+            "buy_price": 25.30,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6973107489952",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 34.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248557,
+            "rn": "7",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL100008",
+            "name": "得力 多功能钢丝钳8.5寸",
+            "buy_price": 33.00,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6971092848860",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 45.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248558,
+            "rn": "8",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL101008",
+            "name": "得力 多功能尖嘴钳9寸",
+            "buy_price": 33.00,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6971092848877",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 45.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248559,
+            "rn": "9",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2612",
+            "name": "得力 12寸双粘塑水泵钳",
+            "buy_price": 24.20,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940533",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 33.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248560,
+            "rn": "10",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2512",
+            "name": "得力 300mm美式重型管钳",
+            "buy_price": 26.40,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940694",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 35.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248561,
+            "rn": "11",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL2514",
+            "name": "得力 350mm美式重型管钳",
+            "buy_price": 31.90,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897940700",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 42.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248562,
+            "rn": "12",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL120109",
+            "name": "得力 卫浴扳手16-68mm管活两用",
+            "buy_price": 15.00,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6973107480669",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 19.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248563,
+            "rn": "13",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL006A",
+            "name": "得力 6寸活扳手",
+            "buy_price": 9.40,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897941042",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 13.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248564,
+            "rn": "14",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL008A",
+            "name": "得力 8寸活扳手",
+            "buy_price": 12.90,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897941059",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 18.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248565,
+            "rn": "15",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL010A",
+            "name": "得力 10寸活扳手",
+            "buy_price": 17.60,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897941066",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 23.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248566,
+            "rn": "16",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL012A",
+            "name": "得力 12寸活扳手",
+            "buy_price": 24.10,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6970897941073",
+            "unit": "把",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 32.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248567,
+            "rn": "17",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL120008",
+            "name": "得力 8寸粘塑柄活扳手",
+            "buy_price": 14.50,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6971092847894",
+            "unit": "PCS",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 19.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248568,
+            "rn": "18",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL120010",
+            "name": "得力 10寸粘塑柄活扳手",
+            "buy_price": 20.80,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6971092847900",
+            "unit": "PCS",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 29.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248569,
+            "rn": "19",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL130008",
+            "name": "得力 两用扳手8",
+            "buy_price": 3.70,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6973107483349",
+            "unit": "支",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 4.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        },
+        {
+            "id": 11248570,
+            "rn": "20",
+            "enabled": true,
+            "is_spec": 0,
+            "code": "DL130010",
+            "name": "得力 两用扳手10",
+            "buy_price": 4.20,
+            "paths": "HOMEHOME/得力工具",
+            "barcode": "6973107483363",
+            "unit": "支",
+            "open_date": "2022-01-12T00:00:00",
+            "brand": "得力工具",
+            "buy_days": 1,
+            "force_batch": 0,
+            "price6": 5.90,
+            "level1": "HOMEHOME",
+            "level2": "得力工具"
+        }
+    ]
+}
