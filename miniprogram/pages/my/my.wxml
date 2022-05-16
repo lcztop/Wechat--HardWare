@@ -14,5 +14,6 @@
 </view>
 
 <button wx:if="{{userInfo == null}}"bindtap="login">登录</button>
+<button wx:if="{{userInfo == null}}"bindtap="isLogin">判断登录</button>
 <customTabBar selectedFromPage = "3"/>
 

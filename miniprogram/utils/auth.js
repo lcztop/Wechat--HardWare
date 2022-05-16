@@ -1,4 +1,5 @@
 const WXAPI = require('apifm-wxapi')
+WXAPI.init('25d5a38cd01fcf5a7df1813a045c88bd')
 import Dialog from '@vant/weapp/dialog/dialog'
 
 async function checkSession(){
@@ -122,18 +123,24 @@ async function login(page){
 }
 
 async function authorize() {
-  // const code = await wxaCode()
-  // const resLogin = await WXAPI.login_wx(code)
-  // if (resLogin.code == 0) {
-  //   wx.setStorageSync('token', resLogin.data.token)
-  //   wx.setStorageSync('uid', resLogin.data.uid)
-  //   return resLogin
-  // }
+  const code = await wxaCode()
+  console.log(code)
+  const resLogin = await WXAPI.login_wx(code)
+  // 未注册用户登录
+  // {code: 10000, msg: "user has not exists"}
+  // code: 10000
+  // msg: "user has not exists"
+  console.log(resLogin)
+  if (resLogin.code == 0) {
+    wx.setStorageSync('token', resLogin.data.token)
+    wx.setStorageSync('uid', resLogin.data.uid)
+    return resLogin
+  }
   return new Promise((resolve, reject) => {
     wx.login({
       success: function (res) {
         const code = res.code
-        let referrer = '' // 推荐人
+        let referrer = '' // 推荐人s
         let referrer_storge = wx.getStorageSync('referrer');
         if (referrer_storge) {
           referrer = referrer_storge;

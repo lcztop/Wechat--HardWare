@@ -183,21 +183,23 @@ Page({
     })
   },
   async addShopCarCheck(options){
-    // AUTH.checkHasLogined().then(isLogined => {
-    //   this.setData({
-    //     wxlogin: isLogined
-    //   })
-    //   if (isLogined) {
-    //     // 处理加入购物车的业务逻辑
-    //     this.addShopCarDone(options)
-    //   } else {
-    //     AUTH.login(this)
-    //   }
-    // })
+    AUTH.checkHasLogined().then(isLogined => {
+      this.setData({
+        wxlogin: isLogined
+      })
+      if (isLogined) {
+        // 处理加入购物车的业务逻辑
+        this.addShopCarDone(options)
+      } else {
+        AUTH.login(this)
+      }
+    })
     this.addShopCarDone(options)
   },
   async addShopCarDone(options){
-    // const res = await WXAPI.shippingCarInfoAddItem(wx.getStorageSync('token'), options.goodsId, options.buyNumber, options.sku)
+    console.log(options)
+    const res = await WXAPI.shippingCarInfoAddItem(wx.getStorageSync('token'), options.goodsId, options.buyNumber, options.sku)
+    console.log(res)
     let code = '1000'
     if (code == '100') {
       // 需要选择规格尺寸
@@ -242,7 +244,9 @@ Page({
     //   skuCurGoodsShow: false
     // })
     wx.showTabBar()
+    
     TOOLS.showTabBarBadge() // 获取购物车数据，显示TabBarBadge
+    
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

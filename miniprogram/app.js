@@ -1,4 +1,6 @@
 //app.js
+const WXAPI = require('apifm-wxapi')
+const AUTH = require('utils/auth')
 App({
   onLaunch: function () {
     if (!wx.cloud) {
@@ -13,37 +15,25 @@ App({
         traceUser: true,
       })
     }
-    wx.login({
-      success: function(res) {
-      console.log(res);
-       if (res.code) {
-         //发起网络请求
-         //doSomething
-       } else {
-         console.log('获取用户登录态失败！' + res.errMsg)
-       }
-     },
-   })
+    
 
-    // wx.cloud.callFunction({
-    //   name:'login'
-    // }).then((res)=> {
-    //   this.globalData.openid = res.result.OPENID
-    //   var that = this
-    //   wx.cloud.database().collection('user').where({
-    //     _openid: res.result.OPENID
-    //   }).get({
-    //       success(res){
-    //         console.log(res)
-    //         that.globalData.userInfo = res.data[0]
-    //       }
-    //   })
-    // })
     
     this.globalData = {
       userInfo: null,
       openid: null
     }
     
+  },
+  onShow: function(){
+    AUTH.checkHasLogined().then(isLogined => {
+      if (!isLogined) {
+        console.log('尚未登录')
+        AUTH.authorize().then( aaa => {
+          AUTH.bindSeller()
+        })
+      } else {
+        AUTH.bindSeller()
+      }
+    })
   }
 })
