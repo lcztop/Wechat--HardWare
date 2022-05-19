@@ -31,6 +31,7 @@ Page({
     scrolltop: 0,
 
     skuCurGoods: undefined,
+    skuCurGoodsShow: false,
     page: 1,
     pageSize: 20
   },
@@ -164,7 +165,7 @@ Page({
     const curGood = this.data.currentGoods.find(ele => {
       return ele.id == e.currentTarget.dataset.id
     })
-    console.log(curGood)
+    // console.log(curGood)
     if (!curGood) {
       return
     }
@@ -179,7 +180,7 @@ Page({
     this.addShopCarCheck({
       goodsId: curGood.id,
       buyNumber: 1,
-      sku: []
+      goods: curGood
     })
   },
   async addShopCarCheck(options){
@@ -197,55 +198,56 @@ Page({
     this.addShopCarDone(options)
   },
   async addShopCarDone(options){
-    console.log(options)
+    console.log(options.goods)
+    let curgoods = options.goods
     const res = await WXAPI.shippingCarInfoAddItem(wx.getStorageSync('token'), options.goodsId, options.buyNumber, options.sku)
     console.log(res)
-    let code = '1000'
-    if (code == '100') {
-      // 需要选择规格尺寸
-      // const skuCurGoodsRes = await WXAPI.goodsDetail(options.goodsId)
-      let skuCurGoodsRes = {
-        'code': 1,
-        'msg': 'yes'
-      }
-      if (skuCurGoodsRes.code != 0) {
-        console.log('123')
-        wx.showToast({
-          title: skuCurGoodsRes.msg,
-          icon: 'none'
-        })
-        return
-      }
-      wx.hideTabBar()
-      const skuCurGoods = skuCurGoodsRes.data
-      skuCurGoods.basicInfo.storesBuy = 1
-      this.setData({
-        skuCurGoods,
-        skuGoodsPic: skuCurGoods.basicInfo.pic,
-        selectSizePrice: skuCurGoods.basicInfo.minPrice,
-        selectSizeOPrice: skuCurGoods.basicInfo.originalPrice,
-        skuCurGoodsShow: true
-      })
-      return
-    }
-    // if (code != 0) {
-    //   wx.showToast({
-    //     title: res.msg,
-    //     icon: 'none'
+    let code = '0'
+    // if (code == '100') {
+    //   // 需要选择规格尺寸
+    //   // const skuCurGoodsRes = await WXAPI.goodsDetail(options.goodsId)
+    //   let skuCurGoodsRes = {
+    //     'code': 1,
+    //     'msg': 'yes'
+    //   }
+    //   if (skuCurGoodsRes.code != 0) {
+    //     console.log('123')
+    //     wx.showToast({
+    //       title: skuCurGoodsRes.msg,
+    //       icon: 'none'
+    //     })
+    //     return
+    //   }
+    //   wx.hideTabBar()
+    //   const skuCurGoods = skuCurGoodsRes.data
+    //   skuCurGoods.basicInfo.storesBuy = 1
+    //   this.setData({
+    //     skuCurGoods,
+    //     skuGoodsPic: skuCurGoods.basicInfo.pic,
+    //     selectSizePrice: skuCurGoods.basicInfo.minPrice,
+    //     selectSizeOPrice: skuCurGoods.basicInfo.originalPrice,
+    //     skuCurGoodsShow: true
     //   })
     //   return
     // }
-    // wx.showToast({
-    //   title: '加入成功',
-    //   icon: 'success'
-    // })
+    if (code != 0) {
+      wx.showToast({
+        title: res.msg,
+        icon: 'none'
+      })
+      return
+    }
+    wx.showToast({
+      title: '加入成功',
+      icon: 'success'
+    })
     // this.setData({
     //   skuCurGoods: null,
     //   skuCurGoodsShow: false
     // })
-    wx.showTabBar()
-    
-    TOOLS.showTabBarBadge() // 获取购物车数据，显示TabBarBadge
+    // wx.showTabBar()
+    wx.setStorageSync('shopcar', curgoods)
+    // TOOLS.showTabBarBadge() // 获取购物车数据，显示TabBarBadge
     
   },
   /**

@@ -1,3 +1,6 @@
+const WXAPI = require('apifm-wxapi')
+const TOOLS = require('../../utils/tools.js')
+const AUTH = require('../../utils/auth')
 Page({
   data: {
     shopCarType: 0, //0自营 1云货架
@@ -41,23 +44,31 @@ Page({
     if (!token) {
       return
     }
-    if (this.data.shopCarType == 0) { //自营购物车
-      var res = await WXAPI.shippingCarInfo(token)
-    } else if (this.data.shopCarType == 1) { //云货架购物车
-      var res = await WXAPI.jdvopCartInfo(token)
+    let res = {
+      data:[],
+      item:[],
+      code: 0
     }
+    res.data = wx.getStorageSync('shopcar')
+    res.item = res.data
+    // if (this.data.shopCarType == 0) { //自营购物车
+    //   var res = await WXAPI.shippingCarInfo(token)
+    // } else if (this.data.shopCarType == 1) { //云货架购物车
+    //   var res = await WXAPI.jdvopCartInfo(token)
+    // }
     if (res.code == 0) {
-      if (this.data.shopCarType == 0) //自营商品
-      {
-        res.data.items.forEach(ele => {
-          if (!ele.stores || ele.status == 1) {
-            ele.selected = false
-          }
-        })
-      }
+      // if (this.data.shopCarType == 0) //自营商品
+      // {
+      //   res.data.items.forEach(ele => {
+      //     if (!ele.stores || ele.status == 1) {
+      //       ele.selected = false
+      //     }
+      //   })
+      // }
       this.setData({
         shippingCarInfo: res.data
       })
+      console.log(this.data.shippingCarInfo)
     } else {
       this.setData({
         shippingCarInfo: null

@@ -22,10 +22,10 @@ Component({
       //   text: "福利购"
       // },
       {
-        pagePath: "../../pages/erweima/erweima",
+        pagePath: "../../pages/hardware/hardware",
         iconPath: "../../images/code.png",
         selectedIconPath: "../../images/code-act.png",
-        text: "会员码"
+        text: "五金小店"
       },
 
       {
